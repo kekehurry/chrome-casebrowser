@@ -34,7 +34,7 @@
   line-height: 1.3vw;
   border-radius: 1.5vw;
   background: #3498db;
-  font-size: 150%;
+  font-size: 120%;
   color:#fff;
   text-align: center;
 }
@@ -58,11 +58,28 @@
   height:100vh;
   background: #fff;
   padding: 2vw 5vw 5vw 5vw;
-  font-size:150%;
+  font-size:120%;
   color:#ccc;
   overflow-y: scroll;
 }
 .category{
   display: inline-block;
   width:70vw;
+}
+.save_button span{
+  position: fixed;
+  bottom: 10vh;
+  right: 5vw;
+  width:50px;
+  height: 50px;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 50px;
+  background: #3498db;
+  color:#fff;
+  border: 0;
+}
+.save_button span:hover{
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
