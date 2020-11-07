@@ -33,7 +33,7 @@
   height:1.5vw;
   line-height: 1.3vw;
   border-radius: 1.5vw;
-  background: #3498db;
+  background: #7d6cfc;
   font-size: 120%;
   color:#fff;
   text-align: center;
@@ -66,6 +66,11 @@
   display: inline-block;
   width:70vw;
 }
+hr{
+  border: none;
+  height: 1px;
+  background: #eee;
+}
 .save_button span{
   position: fixed;
   bottom: 10vh;
@@ -75,9 +80,10 @@
   border-radius: 50px;
   text-align: center;
   line-height: 50px;
-  background: #3498db;
+  background: #7d6cfc;
   color:#fff;
   border: 0;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
 .save_button span:hover{
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);

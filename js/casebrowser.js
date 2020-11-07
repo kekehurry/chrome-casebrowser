@@ -16,21 +16,16 @@ function init(){
 	$("input").blur(function(){if(this.value==''){this.value='请输入关键词'}});
 	$("input").keydown(function(event){if(event.which==13){return search()}});
 	$("button").click(function(){search()});
-	chrome.storage.sync.get(["search_engine","content_setting"],function(result){
+	chrome.storage.sync.get("search_engine",function(result){
 		var search_engine=result["search_engine"];
 		var content_setting=result["content_setting"];
 		for(var engine in search_engine){
 			var domain= search_engine[engine].split('/');
-			var site_name=engine;
-			if(domain[2]){
-				var icon_url=domain[0]+'//'+domain[2]+'/favicon.ico';
-			}else{
-				var icon_url='';
-			}
+			var icon_url='../img/'+engine+'.png';
 			var $container=$('.tag_box').find('ul').eq(0);
 			var $img=$('<img>');
 			var $li=$('<li><img></li>');
-			$li.find('img').attr({src:icon_url,alt:site_name,onerror:"this.parentNode.innerHTML='site_name'".replace('site_name',site_name)})
+			$li.find('img').attr({src:icon_url,alt:engine,onerror:"this.parentNode.innerHTML='site_name'".replace('site_name',engine)})
 			$li.attr({class:"engine_box","data-url": search_engine[engine]});
 			$li.click(function(){this.classList.toggle('active')});
 			$li.dblclick(function(){
@@ -40,7 +35,6 @@ function init(){
 			});
 			$li.insertBefore($container.children().last());
 		};
-		init_setting_page(search_engine,content_setting);
 	});
 	$("#setting_button").click(function(){window.location.href="options.html"});
 }
