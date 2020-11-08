@@ -1,0 +1,95 @@
+.hover_button ul {
+  			width: 60px;
+  			margin: 0;
+  			padding: 10px 0 10px 0;
+  			text-align: center;
+			}
+.hover_button li {
+			text-align:center;
+			height:20px;
+  		margin: 4px;
+  		list-style: none;
+  		font-size: small;
+  		line-height:20px;
+			}
+.hover_button li:hover {
+  			font-weight: 600;
+  			cursor: pointer;
+			}
+      .img_page{
+            position:fixed;
+            width:60%;
+            height:60%;
+            bottom:25%;
+            right:20%;
+            box-shadow:0 5px 5px rgba(0,0,0,0.1);
+            background:#fff;
+            z-index:9998;
+            overflow: hidden;
+              overflow-y: scroll;
+              margin:1%;
+              padding:0.5%;
+              border:1px solid #ccc;
+            }
+          .img_page::-webkit-scrollbar{
+              width:0;
+            }
+          .img_page ul{
+              position: fixed;
+              bottom: 27%;
+              right:22%;
+              margin: 0;
+              padding: 0;
+            }
+          .img_page ul li{
+              float: left;
+              background: #7d6cfc;
+              border:0;
+              color:#fff;
+              outline: none;
+              list-style: none;
+              line-height: 25px;
+              padding: 0 6px 0 6px;
+              margin: 10px;
+            }
+          .img_page ul li:hover{
+            background:#c63cc6;
+            cursor: pointer;
+            }
+          .img_box{
+            float:left;
+            box-sizing: border-box;
+            width:18%;
+            height:20%;
+            border: 1px dashed #ccc;
+            overflow:hidden;
+            vertical-align:middle;
+            text-align:center;
+            backgroung:#ecf0f1;
+            margin:1%;
+            }
+          .img_box.selected {
+            border: 2px solid #7d6cfc;
+            }
+          .img_box span{
+            display:inline-block;
+            height:100%;
+            vertical-align:middle;
+            }
+          .img_box p{
+            width:100%;
+            height:12%;
+            font-size:8%;
+            background:#ccc;
+            color:#fff;
+            z-index:9998;
+            margin:0;
+            }
+          .img_box.selected p {
+            background:#7d6cfc;
+            }
+          .img_box img{
+            vertical-align:middle;
+            width:100%;
+            z-index:9997;
+            }

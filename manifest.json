@@ -8,29 +8,32 @@
      "48" : "./img/casebrowser.png",
      "128" : "./img/casebrowser.png"
    },
-  // "browser_action" : {
-  //   "default_title" : "test",
-  //   "default_popup" : "demo.html",
-  //   "default_icon" : {
-  //     "48" : "./icons/time48.png"
-  //   }
-  // },
-  // "content_scripts" : [
-  //   {
-  //     "matches" : ["*://www.baidu.com/"],
-  //     "js" : ["./content_scripts.js"]
-  //   }
-  // ],
-  // "background" : {
-  //   "scripts" : ["./js/background.js"],
-  //   "popup" : "background.html"
-  // }
+   "browser_action" : {
+     "default_title" : "casebrowser",
+     "default_popup" : "./template/popup.html",
+     "default_icon" : {
+       "48" : "./img/casebrowser.png"
+     }
+   },
+   //"content_scripts" : [
+     //{
+       //"matches" : ["*://*/"],
+       //"js" : ["./js/casebrowser.user.js"]
+     //}
+   //],
+  "background" : {
+     "scripts" : ["./js/background.js"],
+     "persistent":true
+   },
   "chrome_url_overrides": {
-    "newtab": "template/casebrowser.html"
+    "newtab": "./template/casebrowser.html"
   },
   "permissions": [
     "tabs",
-    "storage"
+    "storage",
+    "downloads",
+    "http://*/",
+    "https://*/"
   ],
 "options_page": "template/options.html"
 }
