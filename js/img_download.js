@@ -35,9 +35,7 @@ setTimeout(function(){
         var url=selected_imgs[m].getAttribute('src');
         var name=url.split('?')[0].split('/').slice(-1)[0];
         chrome.runtime.sendMessage(
-          {greeting: "hello"},
-          function(response) {
-            console.log(response.farewell);}
+          {url: url,filename:name},
           );
         // GM_download(url,name);
       }
